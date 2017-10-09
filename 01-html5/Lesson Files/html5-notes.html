@@ -1,0 +1,174 @@
+<!-- coding dojo notes for HTML chapter 1 -->
+
+<!-- html is the language of the web - stands for Hypertext Markup Language -->
+
+<!-- html uses tags to wrap content -->
+
+<!-- these tags can be headings and paragraphs of text, images, links, lists, tables and forms -->
+
+<!-- most all tags have an open and closing tag, and indentation is used to make documents easier to read. anything not defined in a tag ends up being interpreted by the browser by jamming whatever tag it thinks is best around it -->
+
+<!-- the heirarchy that comes from "nesting", is called DOM, or 'Document Object Model': note that later we can use more advanced languages to actualy move the various elements below around like magnets on a refridgerator (the underlying html document being the fridge and the DOM elements being the movable type) -->
+
+<!-- these tags are used for commenting -->
+
+<p> these tags are used for paragraphs </p>
+
+<!-- when creating an html page we must create a <!DOCTYPE HTML>, <html> , <head> , <body> tags in their proper heirarchy and nesting. Understanding the proper nesting of tags and the PCS (Parent/Child/Sibling) relationship is really important -->
+
+<!DOCTYPE HTML> <!-- this is how we define DOCTYPE for HTML5, and is much simpler than the way it was done in 4.01 -->
+<html> <!-- the indented tags beneath are children of this parent html tag -->
+	<head> 
+		<!-- the head tag is a child of its parent, <html>, and is a sibling to <body> tag -->
+		<!-- 
+		within the head tag is where we define properties of the document: 
+		for example -->
+			<title>Our Page Title</title>
+			<meta charset="utf-8"> <!-- this is how this is defined in HTML5 -->
+			<meta name="description" content="description content">
+			<link rel="stylesheet" href="my_css_file.css">  <!-- for <link> and <script> tags, with HTML5 you no longer must define type="" attribute and can just define the src="" or rel="" and href="" attributes respectively-->
+			<script src="my_javascript_library.js"></script>
+		<!-- are all examples of what can go within the head section here. Note that multiple style sheets and scripts can be defined! -->
+	</head> 
+	<body>
+		<!-- inside of the body we can add the following tags -->
+		<div></div><!-- this is our div container and is for generic content and layout purposes: this is for elements that are meaningful together, but creates a line break. -->
+		<span></span> <!-- this area is for generic content without any line breaks but is mostly used for stlying items within other elements, like <p> or <div> content, for example: -->
+		<p>A great quote by Arthur C. Clarke states that <span id="quote"> any sufficiently advanced technology is indistinguishable from magic.</span></p>
+		<!-- here's an example of how <div> can be used for nesting -->
+		<div id="wrapper"> <!-- this nested set of <div> tags helps to outline our page, the id="" attribute allows us to reference each div uniquely: note that only one id name should be used for each element, if multiples are needed, use classes instead -->
+            <div id="header">
+            </div>
+            <div id="main-content">
+            </div>
+            <div id="side-menu">
+            </div>
+            <div id="footer">
+            </div>
+        </div>
+        <!-- notice that the following <p> elements have classes assigned to them -->
+        <p class="book-info">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sollicitudin gravida augue, a eleifend dolor. Sed sagittis ut odio vitae porta. Mauris et sapien lacinia, ornare nulla sit amet, tincidunt turpis. Integer fringilla sem a odio condimentum, vel ullamcorper nulla sagittis.</p>
+  		<p class="book-info">Morbi faucibus id velit sit amet porta. Ut commodo sapien non justo vulputate, sed viverra lorem rhoncus. Morbi luctus urna pellentesque, accumsan erat in, accumsan nisl. Quisque tincidunt, arcu ac feugiat aliquet, lorem arcu pharetra nunc, nec blandit turpis mi ac felis. Duis orci arcu, pulvinar ut nisl at, porta semper sem. Pellentesque id posuere dui. Praesent a risus quis nulla viverra dignissim eu laoreet libero.</p>
+		<h1>heading 1 tag</h1>
+		<h2>heading 2 tag</h2>
+		<h3>heading 3 tag...</h3>
+		<h6>to heading 6 tag</h6>
+		<p>this is our paragraph tag</p>
+		<img src="http://www.server.com/image.jpg" alt="image description" height="0px" width="0px"> <!-- images can be stand alone tags but requires 'src' and 'alt' attributes -->
+		<a href="http://www.google.com" title="link title">Anchor tags</a>
+		<ol>
+			<li>this is an ordered list</li>
+			<li>things are numbered</li>
+		</ol>
+		<ul>
+			<li>this is an unordered list</li>
+			<li>things are bulleted</li>
+		</ul>
+		<table> <!-- this is a table and they too require a head and a body, known as thead and tbody -->
+			<thead>
+				<th>these describe the columns of the table</th>
+			</thead>
+			<tbody> <!-- these describe the body of the table and define the rows -->
+				<tr> <!-- this creates a row but is not where we actually put our data -->
+					<td>this is where our actual table data goes</td> <!-- <td> stands for 'table data' -->
+				</tr>
+			</tbody>
+		</table>
+		<form action="process.php" method="post"> <!-- this creates a form and all form elements must be wrapped in <form> tag -->
+	    	<p>Please Register</p>
+	    	<label> <!-- all objects must have a <label> tag defining the input type and any text that should be displayed -->
+	        	First Name:<input type="text" name="first_name"> <!-- this is a single text line -->
+	    	</label>
+	    	<label>
+	        	Last Name:<input type="text" name="last_name">
+	    	</label>
+	    	<label>
+	        	Email:<input type="text" name="email">
+	    	</label>
+	    	<p>Select your gender:</p>
+	    	<label>
+	        	<input type="radio" name="gender" value="male"> Male  <!-- this is a radio button -->
+	    	</label>
+	    	<label>
+	        	<input type="radio" name="gender" value="female"> Female
+	    	</label>
+	    	<p>Preference for a vacation</p>
+		   	<select name="gender">  <!-- this creates a drop down and does not require a label tag -->
+			    <option value="forest">Forest</option>
+			    <option value="beach">Beach</option>
+			    <option value="city">City</option>
+			</select>
+	    	<p>Select 3 of your favorite colors:</p>
+	    	<label>
+	        	<input type="checkbox" name="color" value="blue">Blue <!-- this is a check box -->
+	    	</label>
+	    	<label>
+	        	<input type="checkbox" name="color" value="green">Green
+	    	</label>
+		    <label>
+		        <input type="checkbox" name="color" value="red">Red
+		    </label>
+		    <label>
+		        <input type="checkbox" name="color" value="black">Black
+		    </label>
+		    <label>
+		        <input type="checkbox" name="color" value="Purple">Purple
+		    </label>
+		    <p>Say a few words about yourself:</p>
+		    <textarea name="description"></textarea>     <!-- this is a text area and does not contain a <label> tag around it -->
+		    <label>
+		        Password: <input type="password" name="password">  <!-- this is a password text line -->
+		    </label>
+		   <label>
+		        Password Confirm: <input type="password" name="password_confirmation">  <!-- this confirms password -->
+		   </label>
+		   <input type="submit" value="Click here to register">  <!-- this is a submit button and the <input> element does not require a <label> elemnt-->
+		</form>
+
+		<!-- here are some other media rich elements for HTML -->
+		<canvas id="work_of_art" width="400" height="200"> <!-- canvas can be used to create dynamic images, read more here: http://www.w3schools.com/html/html5_canvas.asp -->
+    	<p>Your browser does not support canvas</p>
+		</canvas>
+
+		<!-- inserts audio, swap 'controls' variable for 'autoplay' or 'autoplay loop' for auto-play without controls -->
+		<audio controls> 
+			<source src="desperado.ogg"> <!-- note only Safari can decode .mp3 format, so .ogg is also preferred, and will include other browsers -->
+    		<source src="desperado.mp3">
+		</audio>
+
+		<!-- video -->
+		<video width="400" height="200" poster="picture.jpg" controls>  <!-- make sure to define height and width -->
+    		<source src="caddyshack.ogv">  <!-- again media rights battles reign so both formats are necessary for all browsers -->
+    		<source src="movie.mp4">
+		</video>
+
+		<!-- other cool HTML5 stuff -->
+		<label for="language">Your favorite language</label>
+			<input id="language" name="language" type="text" placeholder="i.e. Ruby, Python">  <!-- the 'placeholder' value puts in text when the area is not selected, but once selected removes it, and replaces it when the user clicks away again: this looks cooler -->
+
+		<label for="food">What is your favorite food?</label>
+			<input id="food" name="food" type="text" autofocus> <!-- the 'autofocus' attribute will automatically focus the keyboard/mouse to this element when the form loads -->
+	</body>
+</html>
+
+<!-- know how to define doctype, how to create initial frame of HTML, what common body elements are utilized such as, <div> , <p> , <h1> through <h6> , <img> , <a> , <ol> , <li> , <ul> , <table> , <thead> , <tbody> , <tr> , <td> , <form> tags correctly. -->
+
+<!-- use the W3C Markup Validation Service at http://validator.w3.org to make sure your documents are properly debugged before you have a larger mess on your hand -->
+
+<!-- try and make sure that you don't over use <div> containers -->
+
+<!-- use good semantics and use code the way it's supposed to be used and use elements the way they're supposed to be used -->
+
+<!-- Bad Coding Semantics Example -->
+<span class="heading"><strong>Welcome Back</span></strong>
+<br><br>
+It has been a while. What have you been up to lately?
+<br><br><br>
+
+<!-- Good Coding Semantics Example -->
+<h1>Welcome Back</h1>
+<p> It has been a while. What have you been up to lately?</p>
+
+<!-- always use alt="" attributes with images -->
+
+

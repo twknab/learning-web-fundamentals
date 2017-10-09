@@ -1,0 +1,25 @@
+NOTE: This section will require use of a local server (using MAMP or WAMP). You can read about the tools now, and revisit this section after you have installed and are using a server in your first stack.
+
+There are a lot of cool tools available to help you better organize your CSS code, including preprocessors like LESS and SASS. Preprocessors allow you to write your code in a short-hand version of CSS, which is then turned into regular CSS for the browser. Two of the most popular tools are LESS and SASS. Both compile their version of CSS into regular CSS, but they do so in different ways. LESS is a JavaScript library and can compile on the client-side, while SASS only works on the server-side. SASS requires a bit of familiarity with the command line and Ruby. For this reason, we will be using LESS right now.
+
+You can read about LESS's language features and how to use mix-ins in the LESS documentation here:  http://lesscss.org/features/
+
+Client-side Usage
+Client-side is the easiest way to get started and good for developing with LESS, but in production, when performance and reliability is important, we recommend pre-compiling using node.js or one of the many third party tools available (you'll learn later in the bootcamp how to pre-compile LESS/SASS using Node.js or Rails).
+
+To start off, link your   .less stylesheets with the rel attribute set to "stylesheet/less":
+
+<link rel="stylesheet/less" type="text/css" href="styles.less" />
+Next,  download less.js and include it in a <script></script> tag in the <head> element of your page:
+
+<script src="less.js" type="text/javascript"></script>
+Or the CDN, here:
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/less.js/2.5.1/less.min.js"></script>
+Tips:
+Make sure you include your stylesheets before the script.
+When you link more than one .less stylesheet each of them is compiled independently. So any variables, mix-ins or namespaces you define in a stylesheet are not accessible in any other.
+The HTML file you create will need to be run on a server, your localhost. Follow the directions below on where to place your files, then navigate to "localhost" in your browser (type localhost in the URL bar). If you named your file index.html, you'll see it load automatically. Otherwise, click on the name of your .html file. Check Inspect Element to make sure your stylesheets and the javascript file for LESS are loading correctly if you are having trouble.
+If you have WAMP for Windows, put your files in c:\wamp\www 
+If you have MAMP for Mac, put your files in Applications/MAMP/htdocs/ OR direct your your server to the project folder.
+References:  http://lesscss.org

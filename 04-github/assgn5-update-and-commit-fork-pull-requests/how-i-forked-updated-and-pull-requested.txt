@@ -1,0 +1,7 @@
+1 - first I went to the github link above, logged in with my account and clicked 'fork'.
+2 - this created a fork of the project on my github remote repository.
+3 - I then went and cloned this repository on my local machine (this init'd the repo for me and created the directory)
+4 - I opened VI editor and opened the HTML page and added my changes, I saved and exited back to terminal.
+5 - I ran the 'git add .' command to add these changes to the staging area and then committed with a message. NOTE: Changes thus far only exist on my local repository.
+6 - I ran the command 'git push origin master' to push these changes from my local repository to the associated remote directory. NOTE: This is all still within my own fork, NOT the original project.
+7. I then logged into GitHub.com and went to my repo, I clicked the "Pull Request" tab at the top and clicked "New Pull Request" -- I followed through the next steps (Code Revision) and then sent the pull request to the original author.

@@ -1,0 +1,84 @@
+Github bash commands
+
+pwd
+//print working directory
+
+ls
+//list files
+
+ls -l
+//list files long form (includes file permissions)
+
+ls -a
+//list all files including hidden
+
+cd .
+//change to current directory
+
+cd ..
+//change to parent directory
+
+cd /
+//change to root directory for your computer
+
+cd folder_name
+//change directory to folder_name
+
+mkdir new_directory_name
+//makes a new folder called new_directory_name in whatever dir you're in
+
+rm -rf directory_name
+//deletes directory_name folder even if contents inside. 
+//'-rf' forces it to delete child files of directory - be careful
+
+touch index.html
+touch style.css
+// creates new files index.htm and style.css
+
+rm index.html
+//removes (deletes) file
+
+mv index.html new_name_index.html
+mv new_name_index.html my_new_website
+mv new_name_index.html ../new_name_index.html
+//mv command has two uses, first renames the file. 
+//second example moves the file to the following folder, 'my_new_website'
+//third example moves the file up a dir, via, '../file-name.ext'
+
+cp index.html copy.html
+//creates a copy of index.html as copy.html filename
+
+open .
+//opens your current directory in your GUI interface
+
+sudo mkdir test
+sudo touch index.html
+sudo rm -rf test
+//using the command 'sudo' adds "super user" to the command and can let you run these commands if you're working on a remote workstation and encountering an error
+
+
+
+###################
+OTHER KEWL COMMANDS
+###################
+
+bind -p
+//shows all mac keyboard shortcuts
+
+cd -
+//moves to your last directory
+
+!!
+sudo !!
+//repeats your last command
+//repeats your last command as sudo user
+
+python -m SimpleHTTPServer
+//runs the current directory as a server at http://localhost:8000/
+
+
+open .
+// opens directory in GUI (opens in Finder)
+
+subl <filename>.html 
+// opens filename.html in Sublime (note this was a customization to my system)

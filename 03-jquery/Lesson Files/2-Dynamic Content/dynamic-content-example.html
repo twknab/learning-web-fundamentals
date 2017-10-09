@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Dynamic Content Example</title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/4.2.0/normalize.css">  <!-- normalizes CSS & HTML -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>  <!-- grabs jquery library -->
+	<script type="text/javascript">
+
+		$(document).ready(function(){
+			attachH3();
+			$('.alert').click(function(){
+				alert('you clicked me!');
+			});
+
+			$('.new_btn').click(function(){
+				$('#buttons').append("<button class='alert'>I am a dynamcially generated button!</button>"); // even though we've set the 'alert' class, the class is not applied as this only rendered after the page-load (and is not applied to dynamically generated content)
+			});
+
+			$(document).on('click', '.alert', function(){  // using .on() to the $(document) will scan entire document real time and apply the 'click' function to '#buttons', and create an alert. Note that you can target other things, like $('div button').on() for example (would target all buttons in divs).
+				alert('you clicked me!');
+			});
+
+		}); // end doc ready
+	</script>
+</head>
+<body>
+	<h3>Static Content!</h3>
+	<div>
+		<button class="alert">click me for a message!</button>
+		<button class="alert">click me for a message!</button>
+		<button class="alert">click me for a message!</button>
+		<button class="new_btn">click me for a message!</button>
+	</div>
+	<h3>Dynamically Rendered Content: use of .on()</h3>
+	<div id="buttons">
+	</div>
+	<div id="callback-container">
+		<button id="h3-button">Click me to add a new H3 tag!</button>
+		<h3>Click me to see a message (call-back example)</h3>
+	</div>
+</body>
+</html>

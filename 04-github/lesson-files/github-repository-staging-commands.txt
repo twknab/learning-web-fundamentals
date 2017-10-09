@@ -1,0 +1,49 @@
+GitHub lets us have version control - this saves a back up of our code or even collaborate with other people.
+
+1. working directory
+2. repository (place to work before merging with your original)
+3. staging 
+
+git init
+// this initializes the git repository for whatever folder you're in -- it uses a hidden folder called .git and this is where the repository is created.
+
+
+
+git add .  (all files)
+git add filename_html
+// add any files that have been changed to the staging area
+// once ready you can "commit" these changes from the staging area to the repository
+
+
+git commit -m "message about for the backup"
+// commits the changes in the staging area
+
+git status
+// shows you already what's in the staging area, and what files that have been changed
+
+git diff
+// tells you line by line differences between staged copy and repository
+
+git log
+// gives you a log of all the activities of the repositories along with the messages you typed
+
+
+git blame filename.jpg
+// this tells you who wrote what lines of code for the filename, so you know who to blame whose broken the file
+
+
+git clone http://www.url.of.github.repository
+//GitHub.com allows you to create a repository on their website for free. //You can push the changes in your repository to your GitHub repository.
+//If you have a friend, say Joe, he can create a GitHub account, and he can clone the repository that's been uploaded to GitHub.
+//Joe can also push changes back to GitHub, which you can pull back to your repository.
+
+How to do the above:
+
+git remote add origin http://www.url.of.github.repository
+
+git push 
+// pushes code to that repository (master branch)
+
+git pull
+// pulls changes from your git hub repository to your local repository
+

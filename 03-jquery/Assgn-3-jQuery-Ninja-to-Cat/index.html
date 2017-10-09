@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="description" content="jQuery Ninja to Cat Assignment!">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>jQuery Ninja to Cat Assignment</title>
+	<link rel="stylesheet" href="style.css"> <!-- grabs stylesheet -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/4.2.0/normalize.css">  <!-- normalizes CSS & HTML -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>  <!-- grabs jquery -->
+	<script type="text/javascript">
+		$(document).ready(function(){
+
+			$('img').click(function(){		// Question: How can I do this but with a fade?
+				var oldSrc = $(this).attr("src"); // create a new variable and store the old src
+				var newSrc = 'images/' + $(this).attr("alt-src") + '.jpg'; // create a new variable with our alt-src as a new src
+				$(this).attr("src", newSrc);  // change our src to our new src link (in this case, our cat image) 
+				var oldAlt = $(this).attr("alt-src"); // stores the old alt-src value
+				$(this).attr("alt-src", $(this).attr("alt")).attr("alt", oldAlt); // chains two .attr() functions: 1: sets the alt-src attribute to the alt attribute, 2: sets the alt attribute to the old alt-src value (this allows us to infinitely click as images keep swapping)
+			});
+
+		}); // end document ready
+	</script>
+</head>
+<body>
+	<h1>Assgn 3 - jQuery Ninja to Cat</h1>
+	<p>Click part of the image below to swap each slice with its alternate counter-part!</p>
+	<img src="images/ninja-1.jpg" alt="ninja-1" width="400" height="77" alt-src="cat-1">
+	<img src="images/ninja-2.jpg" alt="ninja-2" width="400" height="77" alt-src="cat-2">
+	<img src="images/ninja-3.jpg" alt="ninja-3" width="400" height="77" alt-src="cat-3">
+	<img src="images/ninja-4.jpg" alt="ninja-4" width="400" height="77" alt-src="cat-4">
+	<img src="images/ninja-5.jpg" alt="ninja-5" width="400" height="77" alt-src="cat-5">
+</body>
+</html>

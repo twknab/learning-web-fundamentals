@@ -1,0 +1,111 @@
+/* CSS Document for Periodic Table Assignment 7 - Tim Knab - July 2016 - Coding Dojo */
+
+/*****************************/
+/*		  CSS RESET 		*/
+/****************************/
+* {
+	vertical-align: baseline;
+	font-weight: inherit;
+	font-family: inherit;
+	font-style: inherit;
+	font-size: 100%;
+	border: 0 none;
+	outline: 0;
+	padding: 0;
+	margin: 0;
+}
+
+/*****************************/
+/*		  MAIN STYLING 		*/
+/****************************/
+
+#wrapper {
+	overflow: hidden;	/* clearfix for wrapper */
+	height: auto;	/* clearfix for wrapper */
+	margin: 0px auto;	/* centers content */
+	width: 900px;
+	margin-top: 30px;
+}
+
+#group, #period {
+	color: #fd0000;
+	font-size: 0.87em;
+}
+
+#period {
+	margin-top: 5px;
+	display: inline-block;
+	vertical-align: top;
+}
+
+	#period ul {
+		margin-right: 30px;
+	}
+
+		#period ul li {
+			padding: 0px 0px 30px 0px;
+		}
+
+#group {
+
+}
+
+	#group ul { 
+
+	}
+
+		#group ul li {
+			display: inline-block;
+			padding: 0px 30px 0px 0px;
+		}
+
+#elements {
+	display: inline-block;
+}
+
+#blue-elements {
+	width: 104px;
+	height: 341px;
+	margin-top: 25px;
+}
+
+	#blue-elements ul {
+		display: inline-block;
+		width: 43px;
+		height: 43px;
+		background: blue;
+	}
+
+		#blue-elements ul li {
+			list-style-type: none;
+		}
+
+#pink-elements {
+
+}
+
+#yellow-elements {
+
+}
+
+#green-elements {
+
+}
+
+.atomic-number {
+	font-size: 0.625em;
+}
+
+.symbol {
+
+}
+
+.atomic-mass {
+	font-size: 0.625em;
+}
+
+.spacer {
+	width: 43px;
+	height: 43px;
+	background: none !important;
+}

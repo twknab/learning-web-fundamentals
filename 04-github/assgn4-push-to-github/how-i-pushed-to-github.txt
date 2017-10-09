@@ -1,0 +1,11 @@
+1. First thing I did was goto github.com and create a new repo with name 'basic_repo'
+2. Second thing I did was open terminal and create a new directory called 'basic_repo' and entered that directory.
+3. Next, in the local directory, I created index.html and style.css
+4. I added these files to the local repo staging area, and committed them.
+5. Once committed, added the remote origin repo, and pushed to it.
+6. I then opened index.html and style.css and added some elements and attributes.
+7. I then added these files to the local staging area, and committed.
+8. Once committed locally, I then pushed to origin master, which added these new changes to my remote repository.
+
+All the newly pushed data now appears at:
+https://github.com/travelingmindful/basic_repo

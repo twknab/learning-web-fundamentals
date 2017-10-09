@@ -1,0 +1,144 @@
+GitHub lets us have version control - this saves a back up of our code or even collaborate with other people.
+
+1. working directory
+2. repository (place to work before merging with your original)
+3. staging 
+
+git init
+// this initializes the git repository for whatever folder you're in -- it uses a hidden folder called .git and this is where the repository is created.
+
+
+
+git add .  (all files)
+git add filename_html
+// add any files that have been changed to the staging area
+// once ready you can "commit" these changes from the staging area to the repository
+
+
+git commit -m "message about for the backup"
+// commits the changes in the staging area
+
+git commit -am "message for branch commit"
+// commits changes for all the files it knows about that has changed
+
+git status
+// shows you already what's in the staging area, and what files that have been changed
+
+git diff
+// tells you line by line differences between staged copy and repository
+
+git log
+// gives you a log of all the activities of the repositories along with the messages you typed
+
+
+git blame filename.jpg
+// this tells you who wrote what lines of code for the filename, so you know who to blame whose broken the file
+
+
+git clone http://www.url.of.github.repository
+//GitHub.com allows you to create a repository on their website for free. //You can push the changes in your repository to your GitHub repository.
+//If you have a friend, say Joe, he can create a GitHub account, and he can clone the repository that's been uploaded to GitHub.
+//Joe can also push changes back to GitHub, which you can pull back to your repository.
+
+How to do the above:
+
+git remote add origin http://www.url.of.github.repository
+
+git push 
+// pushes code to that repository (master branch)
+
+git pull
+// pulls changes from your git hub repository to your local repository
+
+git branch <new branch name> <branch splitting from>
+ie, git branch newFeature master
+// creates branch with new name
+
+git checkout <branch name>
+// move to that branch, or checkout that branch
+
+git checkout -b <new branch name>
+// creates a new branch and then checks it out in one line
+
+git checkout -b <existing branch name>
+// navigates to that branch directly
+
+git merge branchYouWantToMerge
+// straight merge branchYouWantToMerge to branch you've currently checked out or are in
+
+git merge --squash <branch to merge>
+git commit -am "a message about this merge"
+// squash merge branch into the branch you're currently in, the first line stages the commit and the second commits and leaves a message about it
+
+git merge --abort
+// aborts a conflicting merge
+
+git branch
+// see all branches that exist -- current branch will be starred *
+
+git diff
+// see what merge conflicts there are
+
+git remote add origin p
+git push origin master
+// creates a remote repositor at github for your project and the second line then pushes your local repository to github. 'origin' is just the nomenclature used to reference github's remote repository
+
+git remote remove <remote name>
+// removes your github remote repository <remote name>
+
+git remote
+// lists all remote repositories you're connected to
+
+git remote show <remote name>
+// shows more information about that repository
+
+git clone <url of repository>
+// clones remote repository to local machine (remember, cloning is local, forking is remote, clones you own, forks you don’t) — Also remember: when you clone a repository, the remote destination still points to the original repo.
+
+git remote -v
+// look up the remote repo connections
+
+git remote remove {{name}}
+// removes repo
+
+git remote add origin {{url}}
+// adds new remote destination to new repo (remember, create a new repo on github first)
+// if the above command doesn’t work, look it up as I just added this from memory after just using it.
+
+git fetch origin master
+git merge <name>
+OR: git pull origin master -m "this is a fetch and a merge in one command!"
+// fetches from YOUR github repository -- you must merge aftewards!
+// or use the all-in-one command to fetch and merge
+
+git fetch upstream master
+git merge <name>
+// fetches from the original github repository, very important if you forked before cloning
+
+git fetch origin
+git reset --hard origin/[tag/branch/commit-id usually: master]
+// get the origin from the remote repository
+// then reset the code
+(don’t forget to go into mongo or any DB and flush your DB if you do so!)
+
+git remote add origin https://github.com/<username>/<repo_name>.git
+git push origin master
+// adds your remote repository from github, and second line pushes your local repo to the master repo on github
+
+
+git remote set-url origin https://github.com/<username>/<project>.git
+// change the remote origin URL using 'set-url' followed by the existing remote name (in this case, 'origin'), followed by the new URL
+
+
+git checkout -- <file-name>
+// removes file from stage to be deleted
+
+
+git remote add upstream https://github.com/codingdojoinc/online-python-aug-2016
+git merge upstream master
+// grab data from your original project and merges it with your personal fork of the project
+// ie, this should update your forked repo to whom it was forked from...
+// make sure you've pull requested any files before doing this as anything local will be overwritten
+
+
+

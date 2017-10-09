@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Other Javascript Libraries Project</title>
+	<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/4.2.0/normalize.css">  <!-- normalizes CSS & HTML -->
+	<link href="js/skins/line/blue.css" rel="stylesheet"> <!-- grabs the polaris stylesheet for iCheck javascript library -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>  <!-- grabs jquery library -->
+	<script src="js/icheck.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$('input').each(function(){
+		    	var self = $(this),
+		      	label = self.next(),
+		      	label_text = label.text();
+
+		    	label.remove();
+		    	self.iCheck({
+		      		checkboxClass: 'icheckbox_line-blue',
+		      		radioClass: 'iradio_line-blue',
+		      		insert: '<div class="icheck_line-icon"></div>' + label_text
+		    	});
+		  	});
+		  	$('input[type="submit"]').click(function(){ 
+		  		var allToppings = [];
+		  		$("#pizzaToppings :checked").each(function(){
+		  			allToppings.push(' ' + $(this).val());
+		  		});
+		  		alert('Your toppings are:' + allToppings  + ' on a ' + $("#pizzaCrust :checked").val());
+				return false;
+			});
+		}); // end doc ready
+	</script>
+</head>
+<body>
+	<h1>Choose Your Pizza!</h1>
+	<p>Choose your own pizza below to see examples of how javascript libraries can change form elements by merely importing some css and js files!</p>
+	<form action="process.php" method="post" id="myPizza">
+		<h2>1) Choose only one (1) pizza crust style of the following:</h2>
+		<p>(radio button example using custom js library)</p>
+		<ul id="pizzaCrust">
+			<li>
+				<input type="radio" name="iCheck" checked value="thin crust">
+				<label>Thin Crust</label>
+			</li>
+			<li>
+				<input type="radio" name="iCheck" value="deep dish crust">
+				<label>Deep Dish Crust</label>
+			</li>
+			<li>
+				<input type="radio" name="iCheck" value="hand tossed crust">
+				<label>Hand Tossed Crust</label>
+			</li>
+			<li>
+				<input type="radio" name="iCheck" value="stuffed crust">
+				<label>Stuffed Crust</label>
+			</li>
+		</ul>
+		<h2>2) Choose as many of your favorite pizza toppings necessary:</h2>
+		<p>(checklist example using custom js library)</p>
+		<ul id="pizzaToppings">
+			<li>
+				<input type="checkbox" name="toppings" value="pineapple">
+				<label>Pineapple</label>
+			</li>
+			<li>
+				<input type="checkbox" name="toppings" value="black olives">
+				<label>Black Olives</label>
+			</li>
+			<li>
+				<input type="checkbox" name="toppings" value="green pepper">
+				<label>Green Pepper</label>
+			</li>
+			<li>
+				<input type="checkbox" name="toppings" value="sliced tomatoes">
+				<label>Sliced Tomatoes</label>
+			</li>
+			<li>
+				<input type="checkbox" name="toppings" value="artichoke hearts">
+				<label>Artichoke Hearts</label>
+			</li>
+			<li>
+				<input type="checkbox" name="toppings" value="red onion">
+				<label>Red Onion</label>
+			</li>
+			<li>
+				<input type="checkbox" name="toppings" value="spinach">
+				<label>Spinach</label>
+			</li>
+		</ul>
+		<h2>3) Click to start your pizza!</h2>
+		<input type="submit" value="Submit My Survey" id="submit" class="custom-submit iradio_line-blue">
+	</form>
+</body>
+</html>

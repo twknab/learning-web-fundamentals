@@ -1,0 +1,72 @@
+cd desktop
+//change to desktop folder
+
+mkdir test
+//creates dir 'test'
+
+touch index.html
+touch styles.css
+//creates index.html and styles.css sheet
+
+git init
+//creates git repository as hidden folder in working dir
+
+git add .
+//adds newly modified files to staging area
+
+git commit -m "index.html and style.css added"
+//commits changes and logs message for commit
+
+vi index.html
+//opens index.html in vi editor
+
+* pressed esc key * (not a command)
+//switched to edit mode
+
+* added html:5 basic frameout * (not a command)
+* pressed esc * (not a command)
+//switched to command mode
+
+:wq 
+//quits vi editor saving changes and takes back to terminal
+
+git add .
+//adds any modified files to staging area
+
+git commit -m "update html"
+//commits modified files with message
+
+vi styles.css
+//opens styles.css in vi editor
+
+* press esc key * (not a command)
+//switched to edit mode
+
+* add a basic padding and margin styling for body * (not a command)
+* press esc key *
+//switched to command mode
+
+:wq
+//quits vi editor saving changes and returns to terminal
+
+git add .
+//adds any modified files to staging area
+
+git commit -m "update css"
+//commits modified files with message
+
+git log
+//gives log of all commits
+
+git revert 4a03c8e5ac0e960184112975e029e043e7cf9bb5
+// reverts edit with the following hash key
+
+* added message for revert * (not a command)
+* pressed esc key *
+//adds message for revert and leaves edit mode in vi editor
+
+:wq 
+//quits vi editor saving changes (styles.css now reverted)
+
+git log
+//shows log of all commits, including commit reversion

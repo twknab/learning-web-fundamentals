@@ -1,0 +1,67 @@
+/* CSS Sheet for Other Javascript Libraries Project - Tim Knab - July 2016 */
+
+/*****************************/
+/*		  CSS RESET 		*/
+/****************************/
+* {
+	padding: 0;
+	margin: 0;
+	font-weight: inherit;
+	font-family: inherit;
+	font-style: inherit;
+	font-size: 100%;
+}
+
+/*****************************/
+/*		MAIN STYLINGS		*/
+/****************************/
+
+h1 {
+	padding: 20px;
+	font-weight: bolder;
+	text-align: center;
+	text-transform: uppercase;
+}
+
+h2 {
+	padding: 20px;
+	font-weight: bolder;
+	font-size: 1.3em;
+	text-align: center;
+}
+
+p {
+	text-align: center;
+	padding: 10px;
+}
+
+ul {
+	width: 186px;
+	padding: 0px 20px 20px 20px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+	ul li {
+		margin: 10px;
+		list-style-type: none;
+	}
+
+.custom-submit {
+	padding: 5px 15px 5px 15px !important;
+	margin: 20px auto 20px auto !important;
+	display: block;
+}
+
+	.custom-submit:focus {
+		outline: none;
+	}
+
+	.custom-submit:hover {
+		background-color: #f44336;
+	}
+
+	.custom-submit:active {
+		background-color: #005385 !important;
+	}
+

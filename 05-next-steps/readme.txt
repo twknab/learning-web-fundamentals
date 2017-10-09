@@ -1,0 +1,2 @@
+-- see github/pacman-project and github/1942 for games coded in this 'next steps' section.
+-- watched CS50 videos for more programming information

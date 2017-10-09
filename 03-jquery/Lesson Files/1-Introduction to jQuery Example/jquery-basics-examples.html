@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>jQuery Example</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function(){
+
+			var dojo = 'message for the console';
+
+			console.log('you are now working with jQuery!',dojo); // this is listing multiple things
+			console.log(dojo);
+
+			$('h4').click(function(){	// this is saying when you click these h4's do the following functions
+				alert('hello dude');   // this creates a pop-up box
+			});
+
+			$('a').click(function(){
+				alert('you are now leaving the page');
+			});
+
+			//'effects method' demonstration - effects methods allow the visibility of objects
+			$('#hide').click(function(){
+				$('p').hide();		// .hide is a jquery function of 'effects method' -- look at jquery website for more.
+			});
+
+			$('#show').click(function(){
+				$('p').show();		// .show is another jquery function of 'effects method' -- look at jquery website for more.
+			});
+
+			//'manipulation methods' demonstration - a little more complicated -- can add html or text to your document (or can change it) - you can add things with .appen
+
+			$('h3').hover(function(){   // notice the use of .hover here
+				$('h2').text('go see the Space Needle!');
+			}, function(){
+				$('h2').text('Things to do like');
+			}); // .hover is a special function and can actually take two function (optional). notice how the curly bracket is split at the end of the first function...make sure to double check syntax as this is tricky. This will make the h2 text go back to 'things to do' like text.
+
+			$("p#other-things-to-do").hover(function(){	// this is how you do multiple selectors - this is saying of p#id
+				$('h2').text('walk through Discovery Park!');
+			});
+
+			$('.append-button').click(function(){
+				$('.appended-result').append('<h4>I have appended some actual HTML</h4>');  // .append will actually take your element and add html.
+			});
+
+			//'css methods' demonstration - this will change the actual css values of something
+
+			$('button').click(function(){
+				$('button').css('background-color','yellow'); // first is the actual css property to change, and secondly is the new value
+			});
+
+		});
+	</script>
+</head>
+<body>
+	<h4>Click me!</h4>
+	<h4>Click me too!</h4>
+	<a href="#">you are now leaving the page</a>
+	<p>This is the best paragraph of text ever!</p>
+	<button id="hide">Hide all paragraphs with jquery!</button>
+	<button id="show">Show me them p's baby!</button>
+	<h3>Seattle</h3>
+	<h2>Things to do like</h2>
+	<p id="other-things-to-do">what else can I do?</p>
+	<button class="append-button">Click to see .append work!</button>
+	<div class="appended-result"></div>
+</body>
+</html>

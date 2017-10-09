@@ -1,0 +1,220 @@
+forking - similar to git clone but mainly used to create a copy of a repository/project that you can, then, modify independently without changing the original repository. This may be done with your own repository, someone else's open source repository, or a private repository that somebody else has shared with you.
+
+pull request - once you've made your changes to your forked repo, you can make a pull request to the owner of the original repository you forked from. Afterwards, the owner will decide whether or not to include your changes into their repository.
+
+git branch ___ - creates a new branch named ___
+
+git merge ____ - tells Git to merge the codes in branch ____ to whatever branch you're currently on
+
+
+#1 - you can take github project and clone it
+
+#2 - you can create a fork from it
+
+#3 - you can add features to it
+
+#4 - you can then submit a pull request (this says, hey if you want to merge these changes go ahead and accept the request)
+
+#5 - your fork will be merged back to original data
+
+[ CONCEPT OF BRANCHING ]
+
+The first branch created is called 'master'
+
+As you keep comitting, you keep adding forward nodes.
+
+When you get to a place where you want split off
+
+type:
+
+git branch branch-name
+// creates new branch
+
+git checkout branch-name
+// checks out that branch or goes to that branch
+
+What do we do if we want to go back and merge our branch?
+
+#1 - we change our branch back to the master by typing:
+
+git checkout masterBranchName
+
+then type
+
+git merge branchYouWantToMerge
+// merges to the branch you're currently in
+
+What happens if you merge a branch that conflicts with another branch?
+
+AKA, you create branch A and branch B and merge, but similar lines have been editing
+
+--with github you can get a comparison that shows the different codes, and you can work through each change and manually adjust
+
+############
+#
+#	WHEN DO YOU WANT TO MAKE A BRANCH?
+#
+############
+
+
+-experimental changes 
+say you're trying to experiment with a new approach or a re-structuring major components
+
+-new features
+say you're trying to add new features and if they don't workout, you want to roll back to what worked
+
+-bug fixes
+say you want to target a bug, fix it, then merge it back
+
+############
+#
+#	MERGING BRANCHES
+#
+############
+
+1) Straight Merge
+//takes history of one branch and history of other branch and attempt to merge them together
+(both branch histories are preserved)
+
+2) Squashed Merge
+//takes the history (the commit log) of one branch and compress (or squash) it into one commit on top of another branch
+(you'd abandon the history of the squashed branch)
+
+############
+#
+#	MERGING CONFLICTS
+#
+############
+
+If merging conflicts, you need to either manually edit the file, or use a tool like opendiff or xcode to analyze the changes.
+
+############
+#
+#	FORKING
+#
+############
+
+Forking lets you copy a repository from one user account to another on GITHUB. This lets you fork a project (create a copy for yourself to work on). If you make changes that you think improves things, you can send a PULL request to the user, giving them the option of merging your changes. Forks are REMOTE repositories, not stored locally.
+
+GITHUB = FORK / PULL and MERGE 
+
+############
+#
+#	PULL REQUEST
+#
+############
+
+This tells the project owner you forked from to take a look at your changes and merge them with their master.
+
+############
+#
+#	GITHUB as PORTFOLIO
+#
+############
+
+Use github as your portfolio! A lot of employers look at this over LinkedIN
+
+
+############
+#
+#	PUSH
+#
+############
+
+Pushing is when you actually send your local git repository to github's online repository
+
+The word 'origin' is used as the conventional name for the github copy of your repository. Anytime you see 'origin', that's what that means.
+
+commands are as follows:
+
+git remote add origin https://github.com/<myusername>/<github repo name>.git
+git push origin master
+
+
+############
+#
+#	CLONING
+#
+############
+
+Cloning is when you take a remote repository and make a LOCAL COPY. This local copy now does not require the github interface, but of course can still be gitt'd. Remeber, FORKS = REMOTE, CLONES = LOCAL
+
+FORK = a repository you don't own, which creates a copy on your github profile. You can of course CLONE your fork to make a local copy on your local machine.
+
+############
+#
+#	TO FORK OR CLONE?
+#
+############
+
+Fork if:
+
+You are not one of the people directly involved in the project - you have no "ownership".
+You are part of a very large team.
+Your contributions to the project will require approval before they get incorporated.
+Clone if:
+
+You are the only person working on this project.
+You are part of a small team that owns the project.
+
+
+############
+#
+#	HOW TO MANAGE TWO DEVELOPERS AT ONCE
+#
+############
+
+Steps:
+
+Create a project repository in GitHub.
+Clone that repository to your local machine.
+To work on something new, create a descriptively-named branch on GitHub.
+Create a branch with the same name on your local repository. Pull the GitHub branch to your local branch.
+Follow the workflow on your local machine as mentioned from the previous sections of this course.
+Regularly push your work to the GitHub branch! (After every major commit on your local machine.)
+
+Sample Workflow
+Step 0: Planning
+The key in establishing an effective project workflow is communication. Take the time upfront to decide on your workflow “rules”. This will save time and avoid confusion/conflicts. 
+Decide how your group will keep track of tasks, features, and bugs. (GitHub repository issue tracking** is very useful for this, although, a simple Google Doc or even a list on whiteboard could suffice.)
+
+Step 1: Set Up
+One person creates the initial Git repository, pushes it to GitHub, and adds collaborators on the GitHub repository's settings page. All other team members can then clone the repository and add the remote origin (for the original GitHub repository.)
+
+git remote add origin URL
+Step 2: Creating a branch
+The master branch should always work without errors. A branch of the master, called develop or production would be the branch you mainly work from.
+
+Create branches off from develop for fixes or features, and then push to the develop branch (Step 3).
+
+git checkout -b BRANCHNAME
+Move to different branches:
+
+git checkout BRANCHNAME
+Check your current branch:
+
+git branch
+Keep branch names descriptive. For example, "product-view" or "fix-login-password-error". When working with a team, you can add names to the branches "todd-product-view" or "nikki-fix-login-password-error". Always be aware of the branch you are working on, especially when merging or pushing updates.
+
+Step 3: Merging into the develop branch
+Before merging, grab all of the updates from the develop branch onto your own branch and resolve any conflicts.
+
+git pull origin develop
+Conflicts will be noted in the terminal. Open the noted local files to resolve the conflicts. Then, add, commit, and push to your branch. After resolving all conflicts, merge your branch into develop.
+
+git checkout develop
+git merge YOURBRANCH
+git push origin develop
+After merging, you can delete the local and remote version of your old branch.
+
+Step 4: Pushing to the master branch
+Once the develop branch is ready and working, merge the develop branch into the master, and push to GitHub. 
+Congratulations! You've just updated a new version of your master project!
+
+**Using GitHub as backlog/bug list:
+
+As you think of features or encounter bugs that are not directly impeding on your current work, add them to the list and keep moving on.
+Create custom labels, assign tasks to collaborators, and comment on issues/tasks.
+Examples of feature tasks (using the story model): "User should be able to...", "After clicking on a product, the user should see all products with category list." If a feature is huge, break it up into smaller pieces.
+
+

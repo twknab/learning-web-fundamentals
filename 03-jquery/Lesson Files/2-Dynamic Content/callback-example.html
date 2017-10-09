@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Callback Example</title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/4.2.0/normalize.css">  <!-- normalizes CSS & HTML -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>  <!-- grabs jquery library -->
+	<script type="text/javascript">
+
+		function attachH3() {  // callback functions can be described outside of the $(document).ready()
+			$('h3').click(function(){
+				alert('You clicked an H3');   // QUESTION: Why do I get multiple alerts for each H3? Shouldn't this just alert only one instance?
+			});
+		};
+
+		$(document).ready(function(){
+			attachH3();
+
+			//callback example
+			$('button').click(function() {
+				$('div').append('<h3>I am a dynamically generated H3</h3>');
+				attachH3();		// "calls back" to the attachH3() function.
+			});
+
+		}); // end doc ready
+	</script>
+</head>
+<body>
+	<div>
+		<h3>This is an H3 tag</h3>
+		<button>click me to add an H3!</button>
+	</div>
+</body>
+</html>

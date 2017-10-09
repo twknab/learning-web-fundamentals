@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="" content="">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>jQuery Functions Assignment</title>
+	<link rel="stylesheet" href="style.css"> <!-- grabs stylesheet -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/4.2.0/normalize.css">  <!-- normalizes CSS & HTML -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>  <!-- grabs jquery -->
+	<script type="text/javascript">
+	$(document).ready(function(){   // waits for full document to be loaded
+		
+		console.log('This document is ready.'); // logs in console
+
+		//.click function - listen for a click
+		$('#click-button').click(function(){
+			alert('By clicking the button, you just ran the .click() function!');  // when click-button is clicked an alert will popup.
+		});
+
+		//.focus function - focus in on an element
+		$('#focus-button').click(function(){ // used click function to execute focus function
+			$('#txt-field').focus(); // when focus-button is clicked, txt-field will highlight.
+		});
+
+		//.addClass function - add a class to an element
+		$('#add-class-button').click(function(){
+			$('#add-class-text').addClass('add-class-function');  //when button is clicked, .add-class-function is applied to paragraph.
+			$('#add-class-text').text('This paragraph now has a new class applied to it!');
+		});
+
+		//.val function - get or set a value from an element
+		function getSelection() {  // Practicing creating a function here
+  			var selection = $('#text-value').val();
+				if (selection.length < 1) {
+					alert('You need to type something first!');
+				}
+
+				else {
+					alert('You typed, ' + selection + '!');
+				}
+		};
+
+		$('#val-button').click(function(){
+			getSelection();
+		});
+
+		//.text function - get or set text in an element
+		$('#text-button').click(function(){
+			$('#text-function-txt').text('The p element text has been replaced and for giggles a new class has been added :)');
+			$('#text-function-txt').addClass('add-class-function');
+		});
+
+		// .attr() function - change an html attribute
+		$('#attr-button').click(function(){
+			$('#google-link').attr("href","http://www.google.com"); // changes the 'href' attribute of #google-link to 'google.com'
+			alert('The Google URL has been added to the link and now works!');
+		});
+
+		// .html function -- get or set html in an element
+		$('#html-button').click(function(){
+			var customText = $('#demo-text').text();	// is there a better way to attempt this while preserving the original text?
+			$('#demo-text').html('<ul><li>Item 1</li><li>Item 2</li><li>Item 3</li></ul><br>');
+			$('#demo-text').append(customText);
+		});
+
+		// .data function - get or set data
+		$('#data-button').click(function(){
+			$('#data-text').data( "user-input", ( $('#data-text').val() ));
+			if ( $('#data-text').data("user-input") < 1 ) {
+				alert('You have not typed anything!');
+			} else {
+				alert( 'You typed, ' + '"' + $('#data-text').data( "user-input" ) + '"' + '!' );
+				$('#data-display').text( $('#data-text').data("user-input") );
+			}
+		});
+
+		// .before function - insert content before an element
+		$('#before-button').click(function(){
+			var chicken = '<img src="images/chicken.png" alt="Chicken" width="247" height="360">';
+			$('#egg-image-1').before( chicken );
+		});
+
+		// .after function - insert content after an element
+		$('#after-button').click(function(){
+			var chicken = '<img src="images/chicken.png" alt="Chicken" width="247" height="360">';
+			$('#egg-image-2').after ( chicken );
+		});
+
+		// .append function - insert content to the end of each element
+		$('#append-button').click(function(){
+			$('div#append-text > p').append('<h2>The Bold Boisterous H2</h2>')
+		});
+
+		// .show function - display elements
+		$('#show-button').click(function(){
+			$('#snake').show( 800 );
+		});
+
+		// .hide function - hide elements
+		$('#hide-button').click(function(){
+			$('#mouse').hide( 800 );
+		});
+
+		// .toggle function - display/hide or toggle a function with on-click, off-click
+		$('#toggle-button').click(function(){
+			$('#mustache').toggle( 0 );
+		});
+
+		// .fadeIn function - fade to opaque
+		$('#fadeIn-button').click(function(){
+			$('#fadeIn-text').fadeIn( 3000 );
+		});
+
+		// .fadeOut function - fade out to transparent
+		$('#fadeOut-button').click(function(){
+			$('#fadeOut-text').fadeOut( 3000 );
+		});
+
+		// .slideDown function -
+		$('#slideDown-button').click(function(){
+			$('#window-slideDown').slideDown( 6000 );
+		});
+
+		// .slideUp function - display with sliding motion
+		$('#slideUp-button').click(function(){
+			$('#window-slideUp').slideUp( 6000 );
+		});
+
+		// .slideToggle function -
+		$('#slideToggle-button').click(function(){
+			$('#window-slideToggle').slideToggle( 6000 );
+		});
+	}); // end document ready
+	</script>
+</head>
+<body>
+	<h1 id="page-title">jQuery Functions Assignment 1</h1>
+	<h1>.click</h1>
+	<button id="click-button">.click</button>
+	<p>Click the button to run the .click() function.</p>
+	<hr>
+	<h1>.focus</h1>
+	<button id="focus-button">.focus</button>
+	<p>Click the button to .focus() onto the text field.</p>
+	<form>
+		<input type="text" placeholder="Simple Text Field" id="txt-field">
+	</form>
+	<hr>
+	<h1>.addClass</h1>
+	<button id="add-class-button">.addClass</button>
+	<p id="add-class-text">Click the button to add a new class to this p element only!</p>
+	<hr>
+	<h1>.val</h1>
+	<button id="val-button">.val</button>
+	<p>Click the button after typing something to run .val()!</p>
+	<form>
+		<label>
+			<input type="text" name="get-val-text" id="text-value" placeholder="Type something here">
+		</label>
+	</form>
+	<hr>
+	<h1>.text</h1>
+	<button id="text-button">.text</button>
+	<p id="text-function-txt">Click the button to run .text() function and replace this text.</p>
+	<hr>
+	<h1>.attr</h1>
+	<button id="attr-button">.attr</button>
+	<p>Click the button to change the href attribute of the Google link to make it work.</p>
+	<a href="#" id="google-link" target="_blank">Google</a>
+	<hr>
+	<h1>.html</h1>
+	<button id="html-button">.html</button>
+	<p id="demo-text">Click the button to add an HTML bulleted list above the text in this p element.</p>
+	<hr>
+	<h1>.data</h1>
+	<button id="data-button">.data</button>
+	<p>Type something into the text field then click the button to see what you typed!</p>
+	<form style="display: inline-block">
+		<label>
+			<input type="text" name="get-val-text" id="data-text" placeholder="Type something here">
+		</label>
+		<h2 style="display: inline-block;">You typed: <span id="data-display"></span></h2>
+	</form>
+	<hr>
+	<h1>.before</h1>
+	<button id="before-button">.before</button>
+	<p>Click the button to put the chicken *before* the egg!</p>
+	<br>
+	<div class="chicken-and-egg">
+		<img src="images/egg.png" alt="Egg" width="124" height="94" id="egg-image-1">
+	</div>
+	<hr>
+	<h1>.after</h1>
+	<button id="after-button">.after</button>
+	<p>Click the button to put the chicken *after* the egg!</p>
+	<br>
+	<div class="chicken-and-egg">
+		<img src="images/egg.png" alt="Egg" width="124" height="94" id="egg-image-2">
+	</div>
+	<hr>
+	<h1>.append</h1>
+	<button id="append-button">.append</button>
+	<p>Click the button to append an H2 tag to each paragraph.</p>
+		<div id="append-text">
+			<p>This is a text sentence.</p>
+			<p>I too am a text sentence.</p>
+			<p>Not hard being a text sentence.</p>
+		</div>
+	<hr>
+	<h1>.show</h1>
+	<button id="show-button">.show</button>
+	<p>Click the button to show what's under the rock!</p>
+	<br>
+	<img src="images/rock.png" alt="Rock" width="500" height="334" class="rock-snake">
+	<img src="images/snake.png" alt="Snake" width="500" height="250" class="rock-snake" id="snake">
+	<hr>
+	<h1>.hide</h1>
+	<button id="hide-button">.hide</button>
+	<p>Click the button to make the mouse hide!</p>
+	<br>
+	<img src="images/cat.png" alt="Cat" width="448" height="526" class="cat-mouse">
+	<img src="images/mouse.png" alt="Mouse" width="179" height="91" class="cat-mouse" id="mouse">
+	<hr>
+	<h1>.toggle</h1>
+	<button id="toggle-button">.toggle</button>
+	<p>Click the button to toggle on and off this man's mustache.</p>
+	<br>
+	<div id="mustache-face-container">
+		<img src="images/face.png" alt="Man" width="333" height="360" class="mustache-face">
+		<img src="images/mustache.png" alt="Mustache" width="333" height="360" id="mustache">
+	</div>
+	<hr>
+	<h1>.fadeIn</h1>
+	<button id="fadeIn-button">.fadeIn</button>
+	<p>Click the button to fadeIn a div container and cover this text.</p>
+	<p id="fadeIn-text"></p>
+	<hr>
+	<h1>.fadeOut</h1>
+	<button id="fadeOut-button">.fadeOut</button>
+	<p>Click the button to fadeOut and reveal this underlying text.</p>
+	<p id="fadeOut-text"></p>
+	<hr>
+	<h1>.slideDown</h1>
+	<button id="slideDown-button">.slideDown</button>
+	<p>Click the button to slideDown() the window.</p>
+	<img src="images/window.png" alt="Window" width="347" height="455" id="window-slideDown">
+	<hr>
+	<h1>.slideUp</h1>
+	<button id="slideUp-button">.slideUp</button>
+	<p>Click the button to slideUp() the window.</p>
+	<img src="images/window.png" alt="Window" width="347" height="455" id="window-slideUp">
+	<hr>
+	<h1>.slideToggle</h1>
+	<button id="slideToggle-button">.slideToggle</button>
+	<p>Click the button to slide up or down the window with slideToggle().</p>
+	<img src="images/window.png" alt="Window" width="347" height="455" id="window-slideToggle">
+	<hr>
+</body>
+</html>

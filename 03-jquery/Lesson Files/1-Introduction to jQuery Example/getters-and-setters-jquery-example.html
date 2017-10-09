@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Getters and Setters function example</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script> <!-- pulls in jquery -->
+	<script type="text/javascript">
+		$(document).ready(function(){
+
+			//getter function gets a value of something
+			$('button').click(function(){
+				var myText = $('#myParagraph').text();  // this sets the variable myText to be the text of #myParagraph - when text() is used without a variable, it, "gets"
+				alert(myText);
+			});
+
+			//setter function sets a value to something
+			$('button').click(function(){
+				$('#myParagraph').text('see how .text() works as a setter!');  // here, #myParagraph becomes the text-string - note when text() is used with a variable it "sets".
+			});
+
+		}) // end document ready
+	</script>
+</head>
+<body>
+	<p id="myParagraph">This is my paragraph!</p>
+	<button>Click on me to change the paragraph</button>
+</body>
+</html>

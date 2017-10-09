@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Callback Example</title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/4.2.0/normalize.css">  <!-- normalizes CSS & HTML -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>  <!-- grabs jquery library -->
+	<script type="text/javascript">
+
+	// in this example you want to know (1) how to return false; (2) how to use submit as (a) a listener and (b) to hard submit, and (C) learn how to serialize a form to prepare it to be handled by a computer (for AJAX for example)
+		$(document).ready(function(){
+			//alert('hello');
+			$('form').submit(function(){ // here .submit() is working as a listener
+					console.log($(this).serialize()); // .serialize() function turns our form into a nice string to pass along to other computers
+					alert('You are now submitting your form!');
+					return false; // this prevents the form from submitting
+			});
+
+			$('.btn').click(function(){ // here submit() is used to hard-submit
+				$('form').submit();
+			});
+		});
+	</script>
+	<style>
+		body { padding: 20px; }
+	</style>
+</head>
+<body>
+	<form action="process.php" method="post">
+		First name <input type="text" name="first_name">
+		Last name <input type="text" name="last_name">
+		Email <input type="text" name="email">
+		<input type="submit" value="submit!">
+	</form>
+	<button class="btn">Click me to use .submit() differently</button>
+</body>
+</html>

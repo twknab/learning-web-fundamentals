@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="description" content="Hover in and Out jQuery Assignment">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>jQuery Hover In and Out Assignment</title>
+	<link rel="stylesheet" href="style.css"> <!-- grabs stylesheet -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/4.2.0/normalize.css">  <!-- normalizes CSS & HTML -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>  <!-- grabs jquery library -->
+	<script type="text/javascript">
+	$(document).ready(function(){   // waits for full document to be loaded
+		$('img').hover(function(){   // on image hover do the following
+			var oldSrc = $(this).attr("src");	// creates a new variable called oldSrc and sets it to the image src
+			var newSrc = 'images/' + $(this).attr("alt-src") + '.jpeg'; // creates a new variable called newSrc and sets it to 'images/color.jpeg' (alt-src)
+			$(this).attr("old-src", oldSrc).attr("src", newSrc); // chaining of two functions, sets old-src to the oldSrc and sets the src to the newSrc
+		}, function(){
+			var oldSrc = $(this).attr("src"); // stores the current src as oldSrc
+			$(this).attr("src", $(this).attr("old-src")).attr("old-src", oldSrc); // chaining, sets src to old-src, and old-src to oldSrc
+		});
+
+		// in the above example we use the attributes alt-src and old-src to navigate the thumbnail chainge, one way to improve the efficiency of this code is to try eliminating the old-src attribute, and instead have the alt-src swap as brown when the image hovers over a color.
+		
+	}); // end document ready
+	</script>
+</head>
+<body>
+<h1>Assgn 5 - Hover In/Out jQuery</h1>
+<p>Hover over any of the images below to see the jacket in an alternative color.</p>
+	<img src="images/brown.jpeg" alt="Brown Jacket" width="329" height="440" alt-src="blue" old-src="">
+	<img src="images/brown.jpeg" alt="Brown Jacket" width="329" height="440" alt-src="green" old-src="">
+	<img src="images/brown.jpeg" alt="Brown Jacket" width="329" height="440" alt-src="white" old-src="">
+	<img src="images/brown.jpeg" alt="Brown Jacket" width="329" height="440" alt-src="yellow" old-src="">
+</body>
+</html>

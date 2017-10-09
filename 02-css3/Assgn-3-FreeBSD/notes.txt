@@ -1,0 +1,5 @@
+update: 
+
+-fixed line spacing for <p>, <ul> and <ol> elements.
+-updated search text field width.
+-adjusted navigation slightly down and shrank down font size.

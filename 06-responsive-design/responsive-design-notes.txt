@@ -1,0 +1,90 @@
+#######################
+#
+#	Responsive Design Notes!
+#
+#######################
+
+
+
+Instead of being concerned with each device's breakpoints or what device the user is currently using to access your site, the best practice is to target 3 resolutions:
+
+Mobile - 480px horizontal display and lower
+Tablet - 481px to 1023px horizontal display
+Desktop - 1024px horizontal display and higher
+So whether they are using a Netbook, or PSP, or a Laptop, or a Tablet, or whatever it is that they're using that doesn't matter. What matters is the resolution of that device.
+
+But what does this mean for the website design process today? On what resolution should we start building our site with?
+
+Mobile First
+The design of mobile websites is just as crucial as the design of desktop websites. And the websites that were complex and awesome when viewed on the desktop, were not always easy to adapt to mobile devices. Which is both frustrating and time-consuming. Because mobile websites are usually simpler than their desktop counterparts, many web designers started recommending that you start designing the mobile version of the website first, then design it up to the desktop version. Allowing you to focus on the important information and features for the mobile version, then add more as the site gets bigger on tablets and desktops.
+
+While this is a great idea for web designers, it's not always an easy decision for businesses.
+
+Sometimes mobile-first design makes the most sense; sometimes desktop-first design does. The decision should be about providing the best user experience to your target market.
+
+But in this chapter, we will be designing from mobile to the desktop so that you will be familiar with what the current trend is in building responsive layouts.
+
+
+
+#######################
+#
+#	Units
+#
+#######################
+
+Since RWD needs to be fluid and proportional, we will no longer be using pixels (fixed or absolute) that much. Instead, we will use relative units (em, %, rem). Creating media queries using relative units allows browsers to adjust the design based on the zoom level, resulting in a more pleasant, more accessible reading experience.
+
+For now, let's just think about em and rem as multipliers.
+
+rem?
+Different users have different preferences on how they want to access your site. They may have different default zoom level, or font size bigger or smaller, etc. Commonly, the font size is set to 16px by default. So by default, 1rem = 16px. But what it really represents is the default font size that specified by the user in the browser.
+
+In the example below, 3rem is 3 times the default font size. h1 and any other elements that you want to define a font-size with a rem will always be based on the root rem (rem) which is set on the HTML element. 
+
+html {
+    font-size: 1rem;
+}
+h1 {
+    font-size: 3rem;
+}
+So if we go ahead and change HTML element's font size to 1.5rem, then h1's font size will be 3rem times 1.5rem which is 4.5rem, or 72px.
+
+em?
+The only difference between em and rem is em value is relative to its parent element. That means the child element's em value always multiplies to its immediate parent's em value. 
+
+
+
+
+###################
+#
+#	Conclusion
+#
+###################
+
+em is becoming the standard for font sizes on the web, and we will be using ems instead of % when we deal with:
+
+font sizes - Since we are more familiar with pixels, we will be doing calculations a lot to convert pixel to em. The formula is 1 / parent's font-size * required pixel value = em value. So if you are planning to have a 24px text and the parent's font-size is 1em or 16px, then:
+
+1 / 16px * 24px = 1.5em
+sizing images - For images, we are only interested in width, because we will just use auto for the height. Making it adjust proportionately to whatever width the image has. So if we want an image with 20px as width, then:
+
+1 / 16px * 20px = 1.25em
+paddings / margins (for fonts)
+We use % when we deal with:
+
+column's / container's width - If you plan to have a 320px width on a 960px width container, then:
+
+320 / 960 = 33.333% 
+We use rem:
+
+font sizes
+paddings / margins (for fonts)
+Finally, we use px for:
+
+media queries
+paddings / margins (for containers like divs)
+Now, we won't be dropping px completely. We will use it so that we can immediately output something, without having to calculate for the em's. Let's start off with a static design first, so that when you get the desired width, we will then convert each pixel values to a percentage.
+
+em to px Converter
+
+http://pxtoem.com/

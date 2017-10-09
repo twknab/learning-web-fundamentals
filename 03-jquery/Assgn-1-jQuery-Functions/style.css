@@ -1,0 +1,223 @@
+/* CSS Sheet for jQuery Functions Project - Tim Knab - July 2016 */
+
+/*****************************/
+/*		  CSS RESET 		*/
+/****************************/
+* {
+	padding: 0;
+	margin: 0;
+	font-weight: inherit;
+	font-family: inherit;
+	font-style: inherit;
+	font-size: 100%;
+}
+
+/*****************************/
+/*		MAIN STYLINGS		*/
+/****************************/
+body {
+	background: ##625555;
+	background-image: url("images/zenbg-1.png"), url("images/zenbg-2.png");
+	background-repeat: repeat-x, repeat;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	margin: 2em 2em 1em 1em !important;
+	font-weight: 600;
+	color: #ffffff;
+	text-shadow: 2px 2px #7712aa;
+}
+
+h1 {
+	font-size: 3em !important;
+}
+
+h2 {
+	font-size: 1.8em !important;
+}
+
+p, button {
+	margin: 2em !important;
+	display: inline-block;
+}
+
+p { 
+	font-size: 1.3em;
+	color: #ffffff;
+	text-shadow: 2px 2px #7712aa;
+}
+
+a {
+	color: #e570e7;
+    font-weight: 800;
+    font-size: 2.5em;
+}
+
+	a:hover {
+		color: #ffffff;
+		text-decoration: none;
+	}
+
+button {
+	padding: 20px;
+	background: #e570e7;
+	background: -moz-linear-gradient(top,  #e570e7 0%, #c85ec7 47%, #a849a3 100%);
+	background: -webkit-linear-gradient(top,  #e570e7 0%,#c85ec7 47%,#a849a3 100%);
+	background: linear-gradient(to bottom,  #e570e7 0%,#c85ec7 47%,#a849a3 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e570e7', endColorstr='#a849a3',GradientType=0 );
+	border: 5px solid #c85ec7;
+	border-radius: 15px;
+	-webkit-border-radius: 15px;
+	-moz-border-radius: 15px;
+	box-shadow: 0 5px #d1d1d1;
+	-moz-box-shadow: 0 5px #d1d1d1;
+	-webkit-box-shadow:  0 5px #d1d1d1;
+	color: #ffffff;
+	font-size: 1.5em !important;
+	letter-spacing: 0.1em !important;
+	text-shadow: 2px 2px #7712aa;
+}
+
+	button:active {
+		background: #a849a3;
+		background: -moz-linear-gradient(top,  #a849a3 0%, #c85ec7 53%, #e570e7 100%);
+		background: -webkit-linear-gradient(top,  #a849a3 0%,#c85ec7 53%,#e570e7 100%);
+		background: linear-gradient(to bottom,  #a849a3 0%,#c85ec7 53%,#e570e7 100%);
+		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a849a3', endColorstr='#e570e7',GradientType=0 );
+	 	transform: translateY(4px);
+		box-shadow: 0 5px #a0a0a0;
+		-moz-box-shadow: 0 5px #a0a0a0;
+		-webkit-box-shadow:  0 5px #a0a0a0;
+	}
+
+	button:focus {
+		outline: 0;
+	}
+
+hr {
+ 	width: 85%;
+ 	margin: 50px auto 50px auto;
+    border-width: 3px;
+    border-style: dashed;
+    border-color: #a0a0a0;
+}
+
+form {
+	display: inline-block;
+	font-size: 1.3em;
+    color: #ffffff;
+    text-shadow: 2px 2px #7712aa;
+}
+
+	form input {
+		padding: 20px;
+		margin: 20px;
+		font-size: 1.4em;
+	}
+
+	form input:focus {
+		outline-color: #ec03ec;
+    	outline-offset: 0px;
+	    outline-style: solid;
+	}
+
+#page-title {
+	text-align: center;
+	background-color: #c85ec7;
+    width: auto;
+    margin-left: 509px;
+    padding: 20px;
+    border-radius: 15px;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    width: 800px;
+    box-shadow: 0px 5px #a0a0a0;
+    -moz-box-shadow: 0px 5px #a0a0a0;
+    -webkit-box-shadow: 0px 5px #a0a0a0;
+    border: 5px solid #e570e7;
+}
+
+.add-class-function {  /* this class is applied when called by jquery */
+	color: #ffffff;
+    text-shadow: 2px 2px #ec03ec;
+    background-color: #463535;
+    padding: 20px;
+    border: 2px dotted #ec03ec;
+}
+
+.chicken-and-egg {
+	display: inline-block;
+	margin-left: 30px;
+}
+
+#append-text {
+	text-align: center;
+}
+
+.rock-snake {
+	display: inline-block;
+	margin: 5px;
+}
+
+#snake { 
+	display: none; 
+}
+
+.cat-mouse {
+	display: inline-block;
+}
+
+#mustache-face-container {
+	margin-left: auto;
+	margin-right: auto;
+	width: 333px;
+	height: 360px;
+}
+
+.mustache-face {
+	display: inline-block;
+}
+
+#mustache {
+	position: relative;
+	bottom: 370px;
+}
+
+#fadeIn-text {
+	display: none;
+	width: 633px;
+	height: 107px;
+	background-color: rgb(75, 65, 65);
+	position: absolute;
+	left: 200px;
+}
+
+#fadeOut-text {
+	width: 285px;
+	height: 107px;
+	background-color: rgb(75, 65, 65);
+	position: absolute;
+	left: 512px;
+}
+
+#window-slideDown {
+	display: none;	
+}
+
+#window-slideUp {
+
+}
+
+#window-slideToggle {
+	display: none;
+}
+
+
+/*****************************/
+/*		MEDIA QUERIES		*/
+/****************************/
+@media only screen and (max-width: 1372px)  {
+	form {
+		margin-left: 30px;
+	}
+}

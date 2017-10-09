@@ -1,0 +1,16 @@
+Questions:
+
+Q1: Line 23: How could I have multiple click events where a second click focuses onto a second text field?
+
+Q2: Line 28: How could I toggle this so another click removes the class?
+
+Q3: Line 34: Is there a way to use the name of the input as a selector instead of the ID?
+
+Q4: Line 62: is there a better way to attempt this while preserving the original text?
+
+Q5: Can we do a simple example of chaining functions?
+
+Q6: Can we go over some examples of the usage of "this"?
+
+
+

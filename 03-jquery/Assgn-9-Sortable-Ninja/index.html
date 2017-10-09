@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Sortable Ninja with jQuery</title>
+	<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/4.2.0/normalize.css">  <!-- normalizes CSS & HTML -->
+	<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css"> <!-- grabs jQuery UI CSS -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>  <!-- grabs jQuery library -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script> <!-- grabs jQuery UI library -->
+	<script type="text/javascript">
+	$(document).ready(function(){
+		$(" #sortable ").sortable();
+		$( "#sortable" ).disableSelection();
+	}); // end doc ready
+	</script>
+</head>
+<body>
+	<h1>Sortable Ninja using .sortable() function of jQuery UI</h1>
+	<p>Click a portion of the ninja below and drag it to put the pieces in the right order.</p>
+	<div id="sortable">
+		<img src="images/sort1.png" alt="Ninja1" width="369" height="108">
+		<img src="images/sort2.png" alt="Ninja2" width="368" height="93">
+		<img src="images/sort3.png" alt="Ninja3" width="369" height="107">
+		<img src="images/sort4.png" alt="Ninja4" width="371" height="106">
+		<img src="images/sort5.png" alt="Ninja5" width="368" height="129">
+	</div>
+</body>
+</html>

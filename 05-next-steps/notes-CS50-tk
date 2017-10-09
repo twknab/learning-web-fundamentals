@@ -1,0 +1,53 @@
+I watched most all of the videos, and power skimmed some sections and learned a lot of different concepts that we're engaging within here in Coding Dojo. Some of these included things like learning about:
+
+1. Statements:
+Lines of code that tell the computer to do something
+
+2. Boolean Expressions:
+True or False statements (ie, X < 0 or if i = 1 ) - these can only be true or false
+
+3. Loops
+we can re-iterate statements using a loop built on boolean expressions
+
+4. Conditions
+Analyzing conditions and deciding which statements to execute, given the boolean expressions and loops in between
+
+ie, If > Else > Else If , etc
+
+5. Variables
+Stored values which can be manipulated or interacted with
+
+6. Functions
+Entire sets of statements, boolean expressions, loops and conditions and variables that are essentially packaged and can be referenced to run on their own. Ie, you can create functions and tell them when to run, or call back to them and have them run again. Functions are a grouping of algrorithms which can be called when needed.
+
+7. Arrays
+Arrays store mulitple values together, which can be referenced independently. Arrays can also be used as variables or to store variables.
+
+8. Threads
+A thread is the process of running and executing code, line by line. Mulitple threads at once means that more than one code can be run at once (the computer is analyzing multiple things at once, instead of just one line at a time, which is traditionally how we think of programming)
+
+9. Events
+An event is something that happens in a program, usually user based, and can be things like a click, a key event, a hover or off-hover or clicking or interacting with other objects.
+
+10. Binary
+Binary is the ultimate language of computers, written in long combinations of 1s and 0s. Ultimately everything that a computer does comes down to binary information, which is very difficult for us to decipher into human understanding -- this is why we create programming languages, to tell the computer what to do in binary terms so that we don't have to. Binary language depends upon BITS of information -- the less BITS there are, the less information that can be stored in binary. The more bits, the more binary combinations possible.
+
+11. ASCII
+ascii is essentially using numbers, and hence binary, to represent letters. This is how we can use binary and numbers to create characters.
+
+12. Algorithms
+Algorithms are basically step by step instructions telling a computer what to do, by evaluating statements, expressions, loops, conditions, variables and arrays. A function is essentially a or set of algorithms.
+
+13. Psuedocode
+Psuedocode is when we write out instructions for a computer in english, but in the format and indentation of code. Psuedocode is non-functioning code and does not make sense to a computer, but allows us to explore the logic of something as we are trying to figure it out or learning to program. Pseudocode can be a great way to communicate the ideas you're having or explain what you're trying to do when talking with other programmers or developers.
+
+14. Source Code
+source code is the actual programming code that the computer reads, and is written by human hand line by line. source code is essenetially an intermediate as well to the binary world and communicating in the languages that talk to the computer hardware itself
+
+15. Compiler
+A compiler takes code and compiles it down into a working application for our operating system
+
+16. Object Code
+Object code is using visual objects to code and to practice making sense of algorithms and their boolean expressions, statements, conditions and how these can affect our variables and arrays or interact with events.
+
+17. Scratch - a programming tool which allows some visual components to programming and helping us make sense of our logic.

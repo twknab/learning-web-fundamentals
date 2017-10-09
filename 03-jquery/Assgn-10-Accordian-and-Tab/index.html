@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Accordion and Tab with jQuery UI</title>
+	<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/4.2.0/normalize.css">  <!-- normalizes CSS & HTML -->
+	<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css"> <!-- grabs jQuery UI CSS -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>  <!-- grabs jQuery library -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script> <!-- grabs jQuery UI library -->
+	<script type="text/javascript">
+	$(document).ready(function(){
+		$('#accordion').accordion(); // sets accordion() function for #accordion div
+		$('#tabs').tabs(); // sets tabs() function for #tabs div
+		$('#datepicker').datepicker();
+	}); // end doc ready
+	</script>
+</head>
+<body>
+	<h1>My jQuery UI Project</h1>
+	<p>Explore below to see some examples of jQuery UI elements, such as accordions, tabs and more</p>
+	<h2>My Accordion</h2>
+	<div id="accordion">
+		<h3>My Custom jQuery UI Section 1</h3>
+		<div>
+			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam rhoncus a nisl id blandit. Aliquam tristique ultrices nunc, quis pretium arcu tempor a. Proin odio erat, semper at rhoncus id, mollis ut felis. Vivamus porta ex nibh, id tristique nulla sagittis vitae. Nunc et ornare eros. In sapien velit, viverra et felis sit amet, maximus vulputate odio. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nulla vehicula mauris elit. Donec maximus felis eget faucibus pretium. Fusce tincidunt mollis sollicitudin. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nulla facilisi. Pellentesque congue laoreet ex.</p>
+
+			<p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Phasellus lacinia, sem sit amet pellentesque elementum, felis eros sagittis enim, vel tristique lacus metus ut sem. Praesent quis malesuada dui, at interdum lectus. Praesent id dapibus quam. Proin in lacus eu lectus varius condimentum. Phasellus interdum sagittis molestie. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Phasellus cursus porttitor ante, in volutpat arcu maximus sed. Duis accumsan accumsan sollicitudin. Nam hendrerit tincidunt metus non vehicula. In tortor ipsum, dictum et nisi id, eleifend commodo dui.</p>
+		</div>
+		<h3>My Custom jQuery UI Section 2</h3>
+		<div>
+			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam rhoncus a nisl id blandit. Aliquam tristique ultrices nunc, quis pretium arcu tempor a. Proin odio erat, semper at rhoncus id, mollis ut felis. Vivamus porta ex nibh, id tristique nulla sagittis vitae. Nunc et ornare eros. In sapien velit, viverra et felis sit amet, maximus vulputate odio. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nulla vehicula mauris elit. Donec maximus felis eget faucibus pretium. Fusce tincidunt mollis sollicitudin. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nulla facilisi. Pellentesque congue laoreet ex.</p>
+
+			<p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Phasellus lacinia, sem sit amet pellentesque elementum, felis eros sagittis enim, vel tristique lacus metus ut sem. Praesent quis malesuada dui, at interdum lectus. Praesent id dapibus quam. Proin in lacus eu lectus varius condimentum. Phasellus interdum sagittis molestie. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Phasellus cursus porttitor ante, in volutpat arcu maximus sed. Duis accumsan accumsan sollicitudin. Nam hendrerit tincidunt metus non vehicula. In tortor ipsum, dictum et nisi id, eleifend commodo dui.</p>
+		</div>
+			<h3>My Custom jQuery UI Section 3</h3>
+		<div>
+			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam rhoncus a nisl id blandit. Aliquam tristique ultrices nunc, quis pretium arcu tempor a. Proin odio erat, semper at rhoncus id, mollis ut felis. Vivamus porta ex nibh, id tristique nulla sagittis vitae. Nunc et ornare eros. In sapien velit, viverra et felis sit amet, maximus vulputate odio. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nulla vehicula mauris elit. Donec maximus felis eget faucibus pretium. Fusce tincidunt mollis sollicitudin. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nulla facilisi. Pellentesque congue laoreet ex.</p>
+
+			<p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Phasellus lacinia, sem sit amet pellentesque elementum, felis eros sagittis enim, vel tristique lacus metus ut sem. Praesent quis malesuada dui, at interdum lectus. Praesent id dapibus quam. Proin in lacus eu lectus varius condimentum. Phasellus interdum sagittis molestie. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Phasellus cursus porttitor ante, in volutpat arcu maximus sed. Duis accumsan accumsan sollicitudin. Nam hendrerit tincidunt metus non vehicula. In tortor ipsum, dictum et nisi id, eleifend commodo dui.</p>
+		</div>
+	</div>
+	<h2>My Tabs</h2>
+	<div id="tabs">
+		<ul>
+			<li><a href="#tabs-1">My Custom UI Tab 1</a></li>
+			<li><a href="#tabs-2">My Custom UI Tab 2</a></li>
+			<li><a href="#tabs-3">My Custom UI Tab 3</a></li>
+		</ul>
+		<div id="tabs-1">
+			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec non tincidunt nulla. Pellentesque malesuada a nibh vitae suscipit. Nam accumsan volutpat nulla, vitae auctor odio maximus vitae. Aenean commodo iaculis massa in ultricies. Curabitur mattis augue id leo condimentum, id accumsan mauris placerat. In in erat id tortor dapibus congue. Nunc at nisi lacus. Etiam aliquam scelerisque lorem ut molestie.</p>
+		</div>
+		<div id="tabs-2">
+			<p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Phasellus lacinia, sem sit amet pellentesque elementum, felis eros sagittis enim, vel tristique lacus metus ut sem. Praesent quis malesuada dui, at interdum lectus. Praesent id dapibus quam. Proin in lacus eu lectus varius condimentum. Phasellus interdum sagittis molestie. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Phasellus cursus porttitor ante, in volutpat arcu maximus sed. Duis accumsan accumsan sollicitudin. Nam hendrerit tincidunt metus non vehicula. In tortor ipsum, dictum et nisi id, eleifend commodo dui.</p>
+		</div>
+		<div id="tabs-3">
+			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec non tincidunt nulla. Pellentesque malesuada a nibh vitae suscipit. Nam accumsan volutpat nulla, vitae auctor odio maximus vitae. Aenean commodo iaculis massa in ultricies. Curabitur mattis augue id leo condimentum, id accumsan mauris placerat. In in erat id tortor dapibus congue. Nunc at nisi lacus. Etiam aliquam scelerisque lorem ut molestie.</p>
+		</div>
+	</div>
+	<h2>My Date Picker</h2>
+	<p>Choose a date for your upcoming vacation by using the form below</p>
+	<p><strong>Pick your Departure Date:</strong>
+		<input type="text" id="datepicker">
+	</p>
+</body>
+</html>

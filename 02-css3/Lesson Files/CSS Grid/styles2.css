@@ -1,0 +1,27 @@
+body {
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: 1.3em;
+  line-height: 1.4em;
+}
+
+.wrapper {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 0.5em;
+  grid-auto-rows: minmax(100px, auto); 
+  /* Another way to define columns */
+  /* grid-template-columns: 1fr 1fr 1fr; */
+
+  /* Force the rows a certain size: */
+  /* grid-auto-rows: 500px; */
+}
+.wrapper > div {
+  background: orange;
+  padding: 2em;
+  color: darkslateblue;
+}
+
+.wrapper > div:nth-child(odd) {
+  background-color: purple;
+  color: white;
+}
